@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carne &amp; Gusto — Taste, taken seriously</title>
+<meta name="description" content="Carne & Gusto — fresh cuts and fire-roasted chicken, from your neighbourhood stall.">
+<meta name="theme-color" content="#013b12">
+<link rel="icon" href="../shared/img/logo-banner.png">
+<link rel="stylesheet" href="../shared/fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"../shared/three.module.min.js"}}</script>
+</head>
+<body>
+
+<div id="loader"><img src="../shared/img/logo-peach.png" alt="Carne & Gusto"><i><b id="bar"></b></i></div>
+
+<header class="nav">
+  <a href="#top" class="nav__logo"><img src="../shared/img/logo-peach.png" alt="Carne & Gusto"></a>
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn btn--sm" data-cfg="wa" target="_blank" rel="noopener">Order</a>
+</header>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="vignette"></div>
+
+<ol class="dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+
+<main>
+  <!-- 0 · HERO — deliberately says nothing about chicken -->
+  <section class="chap hero" id="top">
+    <div class="hero__inner">
+      <p class="eyebrow">Fire · Craft · Appetite</p>
+      <h1 class="hero__logo"><img src="../shared/img/logo-peach.png" alt="Carne &amp; Gusto"></h1>
+      <p class="hero__sub">Taste, taken seriously.</p>
+    </div>
+    <div class="scroll"><span>Scroll</span><i></i></div>
+  </section>
+
+  <!-- 1 -->
+  <section class="chap" id="story">
+    <div class="copy copy--left" data-reveal>
+      <p class="eyebrow">01 — The Heat</p>
+      <h2>It starts<br>with <em>fire.</em></h2>
+      <p>Every morning, before the shutters go up, the coals are lit. Fresh birds, a 24-hour marinade and a slow turn on the spit — until the skin crackles and the kitchen smells like home.</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="chap" id="bird">
+    <div class="copy copy--right" data-reveal>
+      <p class="eyebrow">02 — The Bird</p>
+      <h2>Nothing<br>to <em>hide.</em></h2>
+      <p>Honest cuts, cooked properly. Look closely — legs, wings, breast, all of it golden, all of it juicy.</p>
+      <ul class="stats">
+        <li><b>24h</b><span>marinade</span></li>
+        <li><b>3h</b><span>slow roast</span></li>
+        <li><b>0</b><span>shortcuts</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="chap" id="stall">
+    <div class="copy copy--bottom" data-reveal>
+      <p class="eyebrow">03 — The Stall</p>
+      <h2>And there it is. <em>Your</em> chicken counter.</h2>
+      <p>Fresh cuts by the kilo. Hot roast off the spit. Pull up, point, and take it home.</p>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div><span>Fresh cuts</span><span>★</span><span>Slow roasted</span><span>★</span><span>Made with fire</span><span>★</span><span>Fresh cuts</span><span>★</span><span>Slow roasted</span><span>★</span><span>Made with fire</span><span>★</span></div></div>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="menu__head">
+      <p class="eyebrow">The Counter</p>
+      <h2>Pick your <em>cut.</em></h2>
+      <div class="tabs" role="tablist">
+        <button class="is-on" data-tab="ready" role="tab">Hot &amp; ready</button>
+        <button data-tab="fresh" role="tab">Fresh cuts · per kg</button>
+      </div>
+    </div>
+    <div class="grid" data-menu="ready" data-pane="ready"></div>
+    <div class="grid" data-menu="fresh" data-pane="fresh" hidden></div>
+    <a class="btn btn--lg" data-cfg="wa" target="_blank" rel="noopener">Order on WhatsApp →</a>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="visit">
+    <div class="visit__grid">
+      <div>
+        <p class="eyebrow">Find the stall</p>
+        <h2>Come<br>hungry.</h2>
+        <a class="btn btn--dark" data-cfg="maps" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+      <div class="info">
+        <h3>Address</h3><p data-cfg="address"></p>
+        <h3>Hours</h3><div class="hours" data-cfg="hours"></div>
+        <h3>Call / WhatsApp</h3><p><a data-cfg="phone"></a></p>
+        <h3>Follow</h3><p data-cfg="instagram"></p>
+      </div>
+    </div>
+    <footer><img src="../shared/img/logo-banner.png" alt="Carne & Gusto"><small>© <span id="yr"></span> Carne &amp; Gusto. All rights reserved.</small></footer>
+  </section>
+</main>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

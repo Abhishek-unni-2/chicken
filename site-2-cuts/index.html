@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carne &amp; Gusto — Cut by cut</title>
+<meta name="description" content="Carne & Gusto — fresh cuts and fire-roasted chicken, from your neighbourhood stall.">
+<meta name="theme-color" content="#f6d2ab">
+<link rel="icon" href="../shared/img/logo-banner.png">
+<link rel="stylesheet" href="../shared/fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"../shared/three.module.min.js"}}</script>
+</head>
+<body>
+
+<div id="loader"><img src="../shared/img/logo-banner.png" alt="Carne & Gusto"></div>
+
+<header class="nav">
+  <a href="#hero" class="nav__logo"><img src="../shared/img/logo-banner.png" alt="Carne & Gusto"></a>
+  <nav>
+    <a href="#cuts">The Cuts</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+    <a class="pill" data-cfg="wa" target="_blank" rel="noopener">Order</a>
+  </nav>
+</header>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<main>
+  <!-- HERO: typographic, no chicken in sight -->
+  <section class="tall" id="hero" style="--h:210vh">
+    <div class="stage hero">
+      <h1><span>Carne</span><span>&amp; Gusto</span></h1>
+      <div class="hero__foot">
+        <p>Good food,<br>done properly.</p>
+        <p class="hero__hint">Scroll<i></i></p>
+        <p>Fire · Craft<br>Appetite</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BIRD -->
+  <section class="tall" id="bird" style="--h:200vh">
+    <div class="stage bird">
+      <p class="big big--top" aria-hidden="true">Slow</p>
+      <p class="big big--bot" aria-hidden="true">Roasted</p>
+      <div class="cap cap--l"><small>01 · The Bird</small><p>Marinated overnight. Turned over fire for hours. Finished when the skin sings.</p></div>
+      <div class="cap cap--r"><small>Then we take it apart ↓</small></div>
+    </div>
+  </section>
+
+  <!-- THE CUTS carousel -->
+  <section class="tall" id="cuts" style="--h:520vh">
+    <div class="stage cuts">
+      <div class="cuts__meta"><span id="cIdx">01</span><i><b id="cBar"></b></i><span>04</span></div>
+      <article class="cutcard" id="cutcard">
+        <small id="cSub"></small>
+        <h2 id="cName"></h2>
+        <p id="cDesc"></p>
+        <ul id="cPrice"></ul>
+        <a class="pill pill--ink" data-cfg="wa" target="_blank" rel="noopener">Order this cut →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- THE STALL orbit -->
+  <section class="tall" id="stall" style="--h:260vh">
+    <div class="stage stall">
+      <div class="stall__copy">
+        <small>02 · The Stall</small>
+        <h2>This is where<br>it <em>happens.</em></h2>
+        <p>Fresh cuts by the kilo. Hot roast off the spit. Walk up, point, take it home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU: editorial price list -->
+  <section class="menu" id="menu">
+    <h2>The <em>Menu</em></h2>
+    <div class="menu__cols">
+      <div><h3>Hot &amp; ready</h3><ul data-menu="ready"></ul></div>
+      <div><h3>Fresh cuts <span>per kg</span></h3><ul data-menu="fresh"></ul></div>
+    </div>
+    <a class="pill pill--big" data-cfg="wa" target="_blank" rel="noopener">Order on WhatsApp →</a>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="visit__top">
+      <h2>Come<br><em>hungry.</em></h2>
+      <div class="info">
+        <div><h4>Find us</h4><p data-cfg="address"></p><a class="link" data-cfg="maps" target="_blank" rel="noopener">Get directions →</a></div>
+        <div><h4>Hours</h4><div class="hours" data-cfg="hours"></div></div>
+        <div><h4>Call / WhatsApp</h4><p><a data-cfg="phone"></a></p><h4>Follow</h4><p data-cfg="instagram"></p></div>
+      </div>
+    </div>
+    <footer><img src="../shared/img/logo-banner.png" alt="Carne & Gusto"><small>© <span id="yr"></span> Carne &amp; Gusto. All rights reserved.</small></footer>
+  </section>
+</main>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
